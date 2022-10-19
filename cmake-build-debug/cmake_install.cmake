@@ -1,4 +1,4 @@
-# Install script for directory: /home/albert/Documentos/GitHub/Unit-Test-Ejemplo
+# Install script for directory: /home/albert/Documentos/GitHub/Tarea_extraclase_II
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug/test/cmake_install.cmake")
+  include("/home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug/test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

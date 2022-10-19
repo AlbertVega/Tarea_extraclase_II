@@ -1,4 +1,4 @@
-# Install script for directory: /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test
+# Install script for directory: /home/albert/Documentos/GitHub/Tarea_extraclase_II/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug/test/googlemock/cmake_install.cmake")
+  include("/home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug/test/googlemock/cmake_install.cmake")
 
 endif()
 

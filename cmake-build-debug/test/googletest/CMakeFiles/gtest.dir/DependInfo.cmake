@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googletest/src/gtest-all.cc" "test/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" "gcc" "test/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d"
+  "/home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googletest/src/gtest-all.cc" "test/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" "gcc" "test/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d"
   )
 
 # Targets to which this target links.

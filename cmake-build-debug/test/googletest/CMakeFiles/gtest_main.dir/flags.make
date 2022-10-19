@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googletest/include -isystem /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googletest
+CXX_INCLUDES = -isystem /home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googletest/include -isystem /home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googletest
 
 CXX_FLAGS = -fprofile-arcs -ftest-coverage -g -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 

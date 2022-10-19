@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_SERIALIZATION_DYN_LINK -DBOOST_SYSTEM_DYN_LINK
 
-CXX_INCLUDES = -I/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googletest/include -I/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googletest -I/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googlemock/include -I/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/test/googlemock -isystem /usr/local/include/opencv4
+CXX_INCLUDES = -I/home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googletest/include -I/home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googletest -I/home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googlemock/include -I/home/albert/Documentos/GitHub/Tarea_extraclase_II/test/googlemock -isystem /usr/local/include/opencv4
 
 CXX_FLAGS = -fprofile-arcs -ftest-coverage -g
 

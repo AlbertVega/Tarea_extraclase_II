@@ -57,10 +57,10 @@ RM = /snap/clion/209/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/albert/Documentos/GitHub/Unit-Test-Ejemplo
+CMAKE_SOURCE_DIR = /home/albert/Documentos/GitHub/Tarea_extraclase_II
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,14 +142,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug/CMakeFiles /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug/test//CMakeFiles/progress.marks
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug/CMakeFiles 0
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug/CMakeFiles /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug/test//CMakeFiles/progress.marks
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -158,17 +158,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -195,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/albert/Documentos/GitHub/Tarea_extraclase_II/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

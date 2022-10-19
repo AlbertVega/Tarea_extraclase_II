@@ -6,6 +6,7 @@
 using namespace std;
 using namespace cv;
 
+
 class Methods{
 public:
     bool DivideImage_(const Mat& img, const int blockWidth, vector<cv::Mat>& blocks){
@@ -13,6 +14,9 @@ public:
     }
     bool Load_(cv::Mat & mat, const char * data_str){
         load(mat, data_str);
+    }
+    bool Save_(const cv::Mat & mat ){
+        save(mat);
     }
 };
 
@@ -43,6 +47,19 @@ public:
     }
 };
 
+class trySave{
+public:
+    bool getSave(Methods& Method3,const cv::Mat & img){
+        if (img.empty()){
+            return false;
+        }
+        else{
+            Method3.Save_(img);
+            return true;
+        }
+    }
+};
+
 class MockDivideImage: public Methods{
 public:
     MOCK_METHOD(bool, DivideImage_, (const cv::Mat& img, const int blockWidth, std::vector<cv::Mat>& blocks));
@@ -51,6 +68,11 @@ public:
 class MockLoad: public Methods{
 public:
     MOCK_METHOD(bool, Load_, (cv::Mat & mat, const char * data_str));
+};
+
+class MockSave: public Methods{
+public:
+    MOCK_METHOD(bool, Save_, (const cv::Mat & mat));
 };
 
 //image to be used for the tests
@@ -71,7 +93,11 @@ TEST(PruebaLoad, prueba2){
     Mat imagecontainer;
     EXPECT_TRUE(Load.getLoad(mockLoad,imagecontainer,serialized.c_str()));
 }
-
+TEST(PruebaSave, prueba3){
+    MockSave mockSave;
+    trySave Save;
+    EXPECT_TRUE(Save.getSave(mockSave,image));
+}
 int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
