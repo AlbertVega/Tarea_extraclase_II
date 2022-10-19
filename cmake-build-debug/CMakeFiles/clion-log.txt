@@ -1,25 +1,6 @@
-/snap/clion/206/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/206/bin/ninja/linux/ninja -G Ninja -S /home/felipe-vargas/CLionProjects/Tarea_extraclase_III -B /home/felipe-vargas/CLionProjects/Tarea_extraclase_III/cmake-build-debug
--- The C compiler identification is GNU 11.2.0
--- The CXX compiler identification is GNU 11.2.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found OpenCV: /usr/local (found version "4.6.0") 
-CMake Error at /snap/clion/206/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
-  Could NOT find Boost (missing: Boost_INCLUDE_DIR system filesystem)
-  (Required is at least version "1.70.0")
-Call Stack (most recent call first):
-  /snap/clion/206/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
-  /snap/clion/206/bin/cmake/linux/share/cmake-3.23/Modules/FindBoost.cmake:2376 (find_package_handle_standard_args)
-  CMakeLists.txt:9 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/felipe-vargas/CLionProjects/Tarea_extraclase_III/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/albert/Documentos/GitHub/Unit-Test-Ejemplo -B /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.70.0") found components: system filesystem 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.70.0") found components: system filesystem serialization 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/albert/Documentos/GitHub/Unit-Test-Ejemplo/cmake-build-debug
