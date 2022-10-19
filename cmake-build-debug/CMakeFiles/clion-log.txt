@@ -1,0 +1,17 @@
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/209/bin/ninja/linux/ninja -G Ninja -S /home/albert/CLionProjects/Unit_Testing_Project -B /home/albert/CLionProjects/Unit_Testing_Project/cmake-build-debug
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.70.0") found components: system filesystem 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.70.0") found components: system filesystem serialization 
+CMake Warning at lib/googletest/CMakeLists.txt:51 (project):
+  VERSION keyword not followed by a value or was followed by a value that
+  expanded to nothing.
+
+
+CMake Error at /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake:43 (message):
+  No VERSION specified for WRITE_BASIC_CONFIG_VERSION_FILE()
+Call Stack (most recent call first):
+  /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake:237 (write_basic_config_version_file)
+  lib/googletest/CMakeLists.txt:101 (write_basic_package_version_file)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/albert/CLionProjects/Unit_Testing_Project/cmake-build-debug/CMakeFiles/CMakeOutput.log".
