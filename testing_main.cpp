@@ -3,46 +3,16 @@
 #include <gmock/gmock.h>
 #include "Server.cpp"
 
+
 using namespace std;
 using namespace cv;
 
-
-class trysave{
-public:
-    bool getsave(methods& methods2, const cv::Mat & mat){
-        if (img.empty()){
-            return false;
-        }
-        else {
-            Method1.DivideImage_(img, blockWidth, blocks);
-            return true;
-        }
-    }
-    class Mocksave: public Methods{
-    public:
-        MOCK_METHOD(bool, save_, (const cv::Mat & mat));
-    };
-
-    TEST(PruebaSave, Prueba2){
-        vector<Mat> blocks;
-        const Mat image = imread("/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/Prueba.jpeg", IMREAD_COLOR);
-        MockSave mockSave;
-        trysave Image;
-        EXPECT_TRUE(Image.getSave(mocksave,image);
-
-
-    }
 class Methods{
 public:
     bool DivideImage_(const Mat& img, const int blockWidth, vector<cv::Mat>& blocks){
+
         int dividestatus = divideImage(img, blockWidth, blocks);
-    }
-    bool Load_(cv::Mat & mat, const char * data_str){
-        load(mat, data_str);
-    }
-    bool save_(const cv::Mat & ave(Mat & mat ){
-        save(Mat & mat );
-    }
+
     }
 };
 
@@ -60,64 +30,105 @@ public:
     }
 };
 
-class tryLoad{
-public:
-    bool getLoad(Methods& Method2, cv::Mat & img, const char * data_str){
-        if (data_str == NULL){
-            return false;
-        }
-        else{
-            Method2.Load_(img, data_str);
-            return true;
-        }
-    }
-};
-
-class trySave{
-public:
-    bool getsave(methods& methods2, const cv::Mat & mat){
-        if (img.empty()){
-            return false;
-        }
-        else {
-            Method1.DivideImage_(img, blockWidth, blocks);
-            return true;
-        }
-    }
-    class Mocksave: public Methods{
-    public:
-        MOCK_METHOD(bool, save_, (const cv::Mat & mat));
-    };
-
 class MockDivideImage: public Methods{
 public:
     MOCK_METHOD(bool, DivideImage_, (const cv::Mat& img, const int blockWidth, std::vector<cv::Mat>& blocks));
 };
 
-class MockLoad: public Methods{
-public:
-    MOCK_METHOD(bool, Load_, (cv::Mat & mat, const char * data_str));
-};
-
-//image to be used for the tests
-const Mat image = imread("/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/Prueba.jpeg", IMREAD_COLOR);
-
 TEST(PruebaDivideImage, Prueba1){
     vector<Mat> blocks;
+    const Mat image = imread("/home/albert/Documentos/GitHub/Unit-Test-Ejemplo/Prueba.jpeg", IMREAD_COLOR);
+
     MockDivideImage mockDivideImage;
-    tryDivideImage divideImage;
-    EXPECT_TRUE(divideImage.getDivideImage(mockDivideImage,image, 50, blocks));
+    tryDivideImage Image;
+    EXPECT_TRUE(Image.getDivideImage(mockDivideImage,image, 50, blocks));
 }
 
-TEST(PruebaLoad, prueba2){
+/**
+ * ejemplo de Uriza
+ */
 
-    string serialized = save(image);
-    MockLoad mockLoad;
-    tryLoad Load;
-    Mat imagecontainer;
-    EXPECT_TRUE(Load.getLoad(mockLoad,imagecontainer,serialized.c_str()));
+class ExchangeCalculator
+{
+public:
+    int Buy(int amount)
+    {
+        return amount * 628;
+    }
+
+    int Sell(int amount)
+    {
+        return amount * 642;
+    }
+};
+
+/**
+ * Clase cliente con valores de dinero en colones y dolares
+ */
+
+class Client
+{
+private:
+    int colones = 70000;
+    int dollars = 200;
+
+public:
+    int GetColones(ExchangeCalculator& dollarCalc, int amount) // Obtiene colones y paga su equivalente en dolares, segun tipo de cambio
+    {
+        colones += amount;
+        dollars -= dollarCalc.Sell(amount);
+
+        return colones;
+    }
+
+    int GetDollars(ExchangeCalculator& dollarCalc, int amount) // Obtiene dolares y paga su equivalente en colones, segun tipo de cambio
+    {
+        dollars += amount;
+        colones -= dollarCalc.Buy(amount);
+
+        return dollars;
+    }
+};
+
+/**
+ * Clase mock para ExchangeCalculator
+ */
+class MockCalculator: public ExchangeCalculator
+{
+public:
+    MOCK_METHOD(int, Buy, (int amount));
+    MOCK_METHOD(int, Sell, (int amount));
+};
+
+/**
+ * Prueba para comprobar si el metodo getdollars en client1 con 800, retorna que el cliente tiene 1000 colones
+ */
+TEST(PruebaCalculadora1, compra1)
+{
+    MockCalculator mockCalculator;
+    Client client1;
+
+    EXPECT_EQ(client1.GetDollars(mockCalculator, 800), 1000);
 }
 
+/**
+ * Prueba para comprobar si el metodo getcolones en client1 con 100, retorna que el cliente tiene 70100 colones
+ */
+TEST(ExchangeTest, selling) {
+    MockCalculator mockCalculator;
+    Client client1;
+
+    EXPECT_EQ(client1.GetColones(mockCalculator, 100), 70100);
+}
+
+/**
+ *
+ * Main siempre es este
+ *
+ * @param argc
+ * @param argv
+ * @return
+ */
 int main(int argc, char *argv[]) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
